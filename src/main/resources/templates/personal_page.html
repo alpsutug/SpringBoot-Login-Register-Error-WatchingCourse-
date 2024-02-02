@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thyneleaf.org">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>ALPEGT - Çevrimiçi Yazılım Öğren</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span th:text="${userLogin}"></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="http://localhost:1870/login#" class="logo">
+                        <h1>ALPEGT</h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li class="scroll-to-section"><a href="#top" class="active">Anasayfa</a></li>
+                      <li class="scroll-to-section"><a href="#services">Hizmetler</a></li>
+                      <li class="scroll-to-section"><a href="#courses">Kurslar</a></li>
+                      <li class="scroll-to-section"><a href="#team">Takım</a></li>
+                      <li class="scroll-to-section"><a href="#contact">İletişim!</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-banner">
+            <div class="item item-1">
+              <div class="header-text">
+                <span class="category">Güncel Teknolojiler</span>
+                <h2>ALPEGT İle Her Şey Daha Kolay</h2>
+                <p>ALPEGT ile frontend teknolojilerinden backend'e bir çok alanda güncel teknolojiler öğrenme fırsatı.</p>
+                <div class="buttons">
+                  <div class="main-button">
+                    <a href="https://www.youtube.com/watch?v=qcfQbJr6Bi0&list=PLHHxlyNPK3PEiySM3TdqIrvSIVGGfPS43" target="_blank">Ders Önizle</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="item item-2">
+              <div class="header-text">
+                <span class="category">Zamandan Tasarruf</span>
+                <h2>Çabalarınızdan en iyi sonucu alın</h2>
+                <p>Doğru ve yerinde teknikler kullanılarak hem zamandan kazanırken hem de ufkunuzu genişletin.</p>
+                <div class="buttons">
+                  <div class="main-button">
+                    <a href="https://www.youtube.com/watch?v=qcfQbJr6Bi0&list=PLHHxlyNPK3PEiySM3TdqIrvSIVGGfPS43" target="_blank">Ders Önizle</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="item item-3">
+              <div class="header-text">
+                <span class="category">ÇEVİRMİÇİ Öğrenme</span>
+                <h2>Çevrimiçi öğrenme ile heryerden erişim</h2>
+                <p>Çevirmiçi öğrenme ile internet erişiminin olduğu her yerden derslere ulaşabilirsin</p>
+                <div class="buttons">
+                  <div class="main-button">
+                    <a href="https://www.youtube.com/watch?v=qcfQbJr6Bi0&list=PLHHxlyNPK3PEiySM3TdqIrvSIVGGfPS43" target="_blank">Ders Önizle</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section about-us" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-1">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Nereden başlamalıyız?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Alpegt'te yazılım eğitim kurslarına dair birçok seçenek bulunmaktadır.Yalın ve zengin içeriklere sahip kurslarımızda frontend ve backen teknolojilerini içeren çok önemli kuslar bulunmaktadır.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Nasıl birlikte çalışıyoruz?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Alpegt, yazılım dünyasında uzmanlaşmış bir eğitim platformudur.Çevrimiçi eğitimler ile internet erişiminin olduğu her yerden vpn kullanmanıza gereksinim duymadan rahatlıkla kurslara erişebilirsiniz.Ayrıca birden çok kursu aynı anda edinebilirsiniz.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Neden Alpegt en iyisi?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Alpegt olarak, kullanıcılarımıza en iyi destek hizmetini sunmaya özen gösteriyoruz. Ayrıca, güncel teknolojiler ve anlaşılabilir arayüzü ile de kullanıcılarına kolaylık sağlıyor.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h6>Nasıl Satın Alınır?</h6>
+            <h2>Alpegt'den nasıl eğitim satın alabilirim?</h2>
+            <p>Kolay ve kullanışlı arayüzü ile Alpegt'den eğitim satın almak artık çok kolay. Tek yapman gereken aşağıdaki linke tıklayarak kursları incelemen ve senin için en faydalı olana karar verip sepete eklemen.</p>
+            <div class="main-button">
+              <a href="#courses">Kursları Gör</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section courses" id="courses" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Güncel Kurslar</h6>
+            <h2>Kurslarımız</h2>
+          </div>
+        </div>
+      </div>
+      <ul class="event_filter">
+        <li>
+          <a class="is_active" href="#!" data-filter="*">Hepsi</a>
+        </li>
+        <li>
+          <a href="#!" data-filter=".design">Frontend</a>
+        </li>
+        <li>
+          <a href="#!" data-filter=".development">Backend</a>
+
+      </ul>
+      <div class="row event_box" >
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/course-01.jpg" alt=""></a>
+              <span class="category">Frontend</span>
+              <span class="price"><h6><em>$</em>160</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">Fahrettin Erdinç</span>
+              <h4>HTML5</h4>
+              <button type="submit" class="orange-button" >
+                <a href="/basket"><p>Sepete Ekle</p></a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/course-02.jpg" alt=""></a>
+              <span class="category">Backend</span>
+              <span class="price"><h6><em>$</em>340</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">Ali Çağlar</span>
+              <h4>Java</h4>
+              <button type="submit" class="orange-button" >
+                <a href="/basket"><p>Sepete Ekle</p></a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/course-03.jpg" alt=""></a>
+              <span class="category">Frontend</span>
+              <span class="price"><h6><em>$</em>640</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">Engin Demiroğ</span>
+
+              <h4>React</h4>
+              <button type="submit" class="orange-button" >
+                <a href="/basket"><p>Sepete Ekle</p></a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/course-04.jpg" alt=""></a>
+              <span class="category">Backend</span>
+              <span class="price"><h6><em>$</em>450</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">Murat Yücedağ</span>
+              <h4>Postman</h4>
+              <button type="submit" class="orange-button" >
+                <a href="/basket"><p>Sepete Ekle</p></a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
+          <div class="events_item">
+            <div class="thumb">
+              <a href=""><img src="assets/images/course-05.jpg" alt=""></a>
+              <span class="category">Backend</span>
+              <span class="price"><h6><em>$</em>320</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">Ali Çağlar</span>
+              <h4>Spring Boot</h4>
+              <button type="submit" class="orange-button" >
+                <a href="/basket"><p>Sepete Ekle</p></a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
+              <span class="category">Frontend</span>
+              <span class="price"><h6><em>$</em>240</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">Fahrettin Erdinç</span>
+              <h4>CSS3</h4>
+              <button type="submit" class="orange-button" >
+                <a href="/basket"><p>Sepete Ekle</p></a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="team section" id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/member-01.jpg" alt="">
+              <span class="category">Full Stack Developer</span>
+              <h4>Ali Çağlar</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/member-02.jpg" alt="">
+              <span class="category">Frontend Developer</span>
+              <h4>Fahrettin Erdinç</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/member-03.jpg" alt="">
+              <span class="category">Frontend Developer</span>
+              <h4>Engin Demiroğ</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              <img src="assets/images/member-04.jpg" alt="">
+              <span class="category">Backend Developer</span>
+              <h4>Murat Yücedağ</h4>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+
+  <div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="contact-wrap w-100 p-md-5 p-4">
+            <h3 class="mb-4">Bize Ulaşın!</h3>
+            <div id="form-message-warning" class="mb-4"></div>
+            <div id="form-message-success" class="mb-4">
+              Yandaki formu doldurarak bizimle iletişime geçebilirsiniz.
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <p>Ayrıca iletişim için:</p>
+                </div>
+                <p></p>
+                <br />
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <p>
+                    <img src="assets/images/telephone.png" style="width: 30px" height="30px" />
+                    &nbsp; <strong>Phone:</strong> +90 123 456 78 90
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group">
+                  <p>
+                    <img src="assets/images/email.png" style="width: 30px" height="30px" />
+                    &nbsp;&nbsp;<strong>Email:</strong> fenercealp7@gmail.com
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="form-group">
+                  <p>
+                    <img
+                            src="assets/images/location.png"
+                            style="width: 30px" height="30px"
+                    />&nbsp;&nbsp;&nbsp;<strong>Address:</strong> Ziraat, Yeni
+                    Ziraat Mahallesi, Etlik Cd Dışkapı, Etlik Cd No:12, 06110
+                    Altındağ/Ankara
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            <iframe
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1OaKG9jDpMPc1-Grx_lqkDdpNPUwDrvo&ehbc=2E312F"
+                    width="600"
+                    height="400"
+            ></iframe>
+          </p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="contact-us-content">
+            <div id="iletisimform">İletişim Formu</div>
+            <form
+                    id="contact-form"
+                    action="https://formspree.io/f/moqooqov"
+                    method="post"
+                    target="_blank"
+            >
+              <div class="row">
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input
+                            type="name"
+                            name="name"
+                            id="name"
+                            placeholder="Adınız..."
+                            autocomplete="on"
+                            required
+                    />
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input
+                            type="text"
+                            name="email"
+                            id="email"
+                            pattern="[^ @]*@[^ @]*"
+                            placeholder="E-Mail Adresiniz..."
+                            required=""
+                    />
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                      <textarea
+                              name="message"
+                              id="message"
+                              placeholder="Mesajınız"
+                              onkeypress="ornek()"
+                      ></textarea>
+                    <br /><br />
+                    <div style="width: 600px" class="yazırenk">
+                      Kullanılan Karakter Sayısı :
+                      <strong id="kullanılankarakter">0</strong>
+                    </div>
+                    <div style="width: 600px" class="yazırenk">
+                      Kalan Karakter Sayısı :
+                      <strong id="kalankarakter">250</strong>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <p></p>
+                  <br />
+                  <fieldset>
+                    <button
+                            type="submit"
+                            id="form-submit"
+                            class="orange-button"
+                            onclick="btnMsgGonderClick()"
+                    >
+                      Bize Mesaj Gönder
+                    </button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p c id="alp">&copy; 2024 Alpsu Tuğ</p>
+
+        <div id="kayanyazi">
+          <marquee onmouseover="this.stop()" onmouseout="this.start()"
+          >MachWorld dünyasına hoşgeldiniz...</marquee
+          >
+        </div>
+        <center style="display: flex">
+          <a
+                  href="https://www.instagram.com/alpsutug/"
+                  target="_blank"
+                  style="margin-left: 370px"
+          >
+            <img
+                    src="assets/images/instagramm.png"
+                    width="100"
+                    height="100"
+            />
+          </a>
+
+          <a
+                  href="https://www.facebook.com/alpsu.tug.1/"
+                  target="_blank"
+                  style="margin-left: 15px; margin-bottom: 60px"
+          >
+            <img src="assets/images/facebok.png" width="100" height="100" />
+          </a>
+
+          <a
+                  href="https://www.youtube.com/@alpanka067"
+                  target="_blank"
+                  style="margin-left: 15px"
+          >
+            <img src="assets/images/youtubee.png" width="100" height="100" />
+          </a>
+
+          <a
+                  href="https://twitter.com/Alpanka06"
+                  target="_blank"
+                  style="margin-left: 15px"
+          >
+            <img src="assets/images/twittt.png" width="100" height="100" />
+          </a>
+
+          <a
+                  href="https://www.linkedin.com/in/alpsu-tu%C4%9F-08a27520a/"
+                  target="_blank"
+                  style="margin-left: 15px"
+          >
+            <img src="assets/images/linkedn.png" width="100" height="100" />
+          </a>
+        </center>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    var kullanılan = 0;
+    var maximum = 249; // 250 bir eksiği olmalı
+
+    function ornek() {
+      var baglan = document.getElementById("message");
+      var uzunluk = baglan.value.length;
+      if (uzunluk >= maximum) {
+        var deger = baglan.value;
+        var olustur = deger.substr(0, maximum);
+        document.getElementById("message").value = olustur;
+        document.getElementById("kullanılankarakter").innerHTML = maximum + 1;
+        document.getElementById("kalankarakter").innerHTML = 0;
+      } else {
+        var deger = baglan.value;
+        var olustur = deger.substr(0, maximum);
+        document.getElementById("message").value = olustur;
+        document.getElementById("kullanılankarakter").innerHTML = uzunluk + 1;
+        document.getElementById("kalankarakter").innerHTML =
+                maximum + 1 - (uzunluk + 1);
+      }
+    }
+
+
+    function btnMsgGonderClick() {
+      setTimeout(() => {
+        document.getElementById("message").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("kullanılankarakter").innerHTML = 0;
+        document.getElementById("kalankarakter").innerHTML = 250;
+      }, 1000);
+    }
+  </script>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

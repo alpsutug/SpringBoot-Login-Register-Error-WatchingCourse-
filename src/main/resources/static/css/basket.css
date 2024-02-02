@@ -1,0 +1,178 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Colors */
+:root {
+    --bg-color: #f0f2f5;
+    --primary-color: #3b82f6;
+    --secondary-color: #ffffff;
+    --text-color: #111827;
+    --hover-color: #2c5282;
+}
+
+/* Typography */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    border: 1px solid var(--text-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Product */
+.product {
+    display: flex;
+    align-items: center;
+}
+
+.product img {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+/* Quantity */
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    border: 1px solid var(--text-color);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quantity button:hover {
+    background-color: var(--hover-color);
+}
+
+.quantity span {
+    width: 1.5rem;
+    text-align: center;
+}
+
+/* Summary */
+.summary {
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.summary h2 {
+    margin-bottom: 1rem;
+}
+
+.summary div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.summary hr {
+    margin: 0.5rem 0;
+}
+
+.summary button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.summary button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .flex-col {
+        flex-direction: column;
+    }
+
+    .flex-row {
+        flex-direction: row;
+    }
+
+    .gap-4 {
+        gap: 1rem;
+    }
+
+    .py-8 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .p-6 {
+        padding: 1.5rem;
+    }
+
+    .mb-4 {
+        margin-bottom: 1rem;
+    }
+
+    .mt-4 {
+        margin-top: 1rem;
+    }
+
+    .rounded-lg {
+        border-radius: 0.5rem;
+    }
+
+    .shadow-md {
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    }
+}
